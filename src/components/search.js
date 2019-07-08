@@ -6,11 +6,15 @@ class Search extends React {
 		word: ''
 	}
 
+	getWord = (e) => {
+		this.setState({word: e.target.value});
+	}
+
 	render() {
 		return (
-			<div><input type="text" name="wordSearch"/></div>
+			<div><input type="text" name="wordSearch" onChange={getWord}/></div>
 		);
 	}	
 }
 
-export Search default;
+export default Search;
