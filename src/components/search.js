@@ -11,6 +11,7 @@ class Search extends Component {
 		this.setState({word: e.target.value});
 		console.log(this.state.word);
 
+		
 		}
 
 	onSubmit = (e) => {
