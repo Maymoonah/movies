@@ -6,4 +6,4 @@ const Header = () => {
 	);
 }
 
-export Header default;
+export default Header;
