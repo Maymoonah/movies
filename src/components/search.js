@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Search extends React {
+class Search extends Component {
 	
 	state = {
 		word: ''
@@ -12,7 +12,7 @@ class Search extends React {
 
 	render() {
 		return (
-			<div><input type="text" name="wordSearch" onChange={getWord}/></div>
+			<div><input type="text" name="wordSearch" onChange={this.getWord}/></div>
 		);
 	}	
 }
