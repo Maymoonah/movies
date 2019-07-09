@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
 	return (
-		<div className="mr-3">My Word App</div>
+		<div className="h1 text-center">My Word App</div>
 	);
 }
 
