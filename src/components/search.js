@@ -33,7 +33,7 @@ class Search extends Component {
 		return (
 			<div className="text-center" >
 				<input type="text" name="searchWord" onKeyUp={this.getWord} />
-				<button type="submit" onClick={this.onSubmit}>Search</button>
+				<button type="submit" className="btn-info" onClick={this.onSubmit}>Search</button>
 			</div>
 		);
 	}	
