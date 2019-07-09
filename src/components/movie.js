@@ -1,12 +1,21 @@
 import React from 'react';
-import Search from 'search';
 
 const Movie = (props) => {
 	return (
-		<div>
-			
+		<div className="container">
+			<div className="results">
+					<h4 className="text-center synonyms">Synonyms</h4>
+					{	
+						//map through synonyms array and append items to li
+						props.movieData.map((item)=> {
+							return (
+								<li key={item} className="list-item col-md-4">{item}</li>
+							)
+						})
+					}
+				</div>
 		</div>
 	);
 }
 
-export default Header;
+export default Movie;
