@@ -7,34 +7,46 @@ class Search extends Component {
 		data: []
 	}
 
+	//function to set state.word to user input.
 	getWord = (e) => {
 		this.setState({word: e.target.value});
-		console.log(this.state.word);
+	}
 
-		
-		}
-
+	//fetch api on submit
 	onSubmit = (e) => {
-		console.log('clicked')
 		const API_KEY = 'c617e14926msh1b32a202714298ap130120jsn5a3fce0740f8';
 
 	    fetch(`https://wordsapiv1.p.rapidapi.com/words/${this.state.word}/typeOf`, {
-	      headers : {
-	      "X-RapidAPI-Host": "wordsapiv1.p.rapidapi.com",
-	      "X-RapidAPI-Key": API_KEY
-	      }
-	    }
+		      headers : {
+		      "X-RapidAPI-Host": "wordsapiv1.p.rapidapi.com",
+		      "X-RapidAPI-Key": API_KEY
+		      }
+		    }
 	    )
 	    .then(response => response.json())
-	    .then(data => console.log(data)); 
+	    .then(data => this.setState({ data: data.typeOf })); 
 	}
 	
 	render() {
 		return (
-			<div className="text-center" >
-				<input type="text" name="searchWord" onKeyUp={this.getWord} />
-				<button type="submit" className="btn-info" onClick={this.onSubmit}>Search</button>
+			<div className="container">
+				<div className="text-center" >
+					<input type="text" name="searchWord" onChange={this.getWord} />
+					<button type="submit" className="btn-info" onClick={this.onSubmit}>Search</button>
+				</div>
+				<div className="results">
+					<h4 className="text-center synonyms">Synonyms</h4>
+					{	
+						//map through data array and append items to li
+						this.state.data.map((item)=> {
+							return (
+								<li key={item} className="list-item">{item}</li>
+							)
+						})
+					}
+				</div>
 			</div>
+			
 		);
 	}	
 }
