@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Movie from './movie';
 
 class Search extends Component {
 	
@@ -47,21 +48,8 @@ class Search extends Component {
 					<input type="text" name="searchWord" onChange={this.getWord} />
 					<button type="submit" className="btn-info" onClick={this.onSubmit}>Search</button>
 				</div>
-				<div className="results">
-					<h4 className="text-center synonyms">Synonyms</h4>
-					{	
-						//map through synonyms array and append items to li
-						this.state.synonyms.map((item)=> {
-							return (
-								<li key={item} className="list-item col-md-4">{item}</li>
-							)
-						})
-					}
-
-					
-				</div>
+				<Movie movieData={this.state.data}/>
 			</div>
-			
 		);
 	}	
 }
