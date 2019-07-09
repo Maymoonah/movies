@@ -18,17 +18,6 @@ class Search extends Component {
 	onSubmit = (e) => {
 		const API_KEY = 'c617e14926msh1b32a202714298ap130120jsn5a3fce0740f8';
 
-		//fetch call to words api
-	    fetch(`https://wordsapiv1.p.rapidapi.com/words/${this.state.word}/typeOf`, {
-		      headers : {
-		      "X-RapidAPI-Host": "wordsapiv1.p.rapidapi.com",
-		      "X-RapidAPI-Key": API_KEY
-		      }
-		    }
-	    )
-	    .then(response => response.json())
-	    .then(data => this.setState({ synonyms: data.typeOf })); 
-
 	    //fetch call to Urban dictionary api
 	    fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?page=1&r=json&s=${this.state.word}`, {
 		      headers : {
