@@ -25,6 +25,16 @@ class Search extends Component {
 	    )
 	    .then(response => response.json())
 	    .then(data => this.setState({ data: data.typeOf })); 
+
+	    fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=${this.state.word}`, {
+		      headers : {
+		      "X-RapidAPI-Host": "mashape-community-urban-dictionary.p.rapidapi.com",
+		      "X-RapidAPI-Key": API_KEY
+		      }
+		    }
+	    )
+	    .then(response => response.json())
+	    .then(data => console.log(data)); 
 	}
 	
 	render() {
