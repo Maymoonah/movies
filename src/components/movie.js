@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 const Movie = (props) => {
 	return (
 		<Container>
-			<Row>		
+			<Row className="row">		
 				{	
 					//poster, title, type, year, imdbID
 
