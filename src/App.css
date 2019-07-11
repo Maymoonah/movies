@@ -1,5 +1,8 @@
-.title {
-  padding: 20px;
+.title h1 {
+  padding: 10px;
+  background-color: #5c96cc;
+  font-family: 'Amatic SC', cursive;
+  font-size: 56px;
 }
 
 .btn-info {
