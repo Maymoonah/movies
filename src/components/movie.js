@@ -21,7 +21,7 @@ const Movie = (props) => {
 											<h6 className="movieTitle">{item.Title.substring(0, 15) + '...'}</h6>
 										}
 										{
-											item.Poster === "N/A" ? <img src="https://dummyimage.com/200x350&text=Picture+Not+Available" /> :	
+											item.Poster === "N/A" ? <img src="https://dummyimage.com/200x350&text=Picture+Not+Available" alt="not Available"/> :	
 											<img src={item.Poster} alt={item.Title}/>
 										}
 										
