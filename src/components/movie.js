@@ -1,25 +1,30 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
 
 const Movie = (props) => {
 	return (
-		<div className="container">
-			<h4 className="text-center synonyms">Synonyms</h4>
-			{	
-				//poster, title, type, year, imdbID
+		<Container>
+			<Row>		
+				{	
+					//poster, title, type, year, imdbID
 
-				//map through synonyms array and append items to li
-				props.movieData.map((item)=> {
-						return (
-							<div className="movieList row">
-								<div className="col-md-4">
-									<li key={item.ImdbID} className="list-item col-md-4">{item.Title}</li>
-									<img src={item.Poster} alt={item.Title}/>
-								</div>
-							</div>
-						)
-				})
-			}
-		</div>
+					//map through synonyms array and append items to li
+					props.movieData.map((item)=> {
+							return (
+								<Col md={3} key={item.ImdbID} className="movieList">
+									<div className="col-md-4">
+										<h2 className="list-item col-md-4">{item.Title}</h2>
+										<img src={item.Poster} alt={item.Title}/>
+									</div>
+								</Col>
+							)
+					})
+				}
+			</Row>
+		</Container>
 	);
 }
 
