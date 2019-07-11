@@ -2,7 +2,9 @@ import React from 'react';
 
 const Header = () => {
 	return (
-		<div className="h1 text-center title">My Movie App</div>
+		<div className="text-center title">
+			<h1>My Movie App</h1>
+		</div>
 	);
 }
 
