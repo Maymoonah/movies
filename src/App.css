@@ -9,3 +9,13 @@
 .synonyms {
   margin: 10px;
 }
+
+.movieList img {
+  height: 300px;
+  width: 200px;
+}
+
+.movieList .movieTitle {
+  width: 200px;
+  padding: 10px;
+}
