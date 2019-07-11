@@ -28,6 +28,8 @@ class Search extends Component {
 	    )
 	    .then(response => response.json())
 	    .then(data => this.setState({ data: data.Search }))
+
+	    //add error handling
 	}
 	
 	render() {
