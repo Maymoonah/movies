@@ -16,9 +16,14 @@
 .movieList img {
   height: 300px;
   width: 200px;
+  margin: 20px auto;
 }
 
 .movieList .movieTitle {
   width: 200px;
   padding: 10px;
+}
+
+.movieCard {
+	width: 250px;
 }
