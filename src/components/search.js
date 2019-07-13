@@ -35,7 +35,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="text-center" >
+				<div className="text-center searchBar" >
 					<input type="text" name="searchWord" onChange={this.getWord} />
 					<button type="submit" className="btn-info" onClick={this.onSubmit}>Search</button>
 				</div>
