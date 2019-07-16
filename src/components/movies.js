@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
-const Movie = (props) => {
+const Movies = (props) => {
 	return (
 		<Container>
 			<Row className="row">		
@@ -30,4 +30,4 @@ const Movie = (props) => {
 	);
 }
 
-export default Movie;
+export default Movies;
