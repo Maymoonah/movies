@@ -13,8 +13,8 @@ const Movie = (props) => {
 					//map through synonyms array and append items to li
 					props.movieData.map((item)=> {
 							return (
-								<Col md={3} key={item.ImdbID} className="movieList">
-									<div className="col-md-4">
+								<Row key={item.ImdbID} className="movieList">
+									<Col md={3}>
 										{
 											item.Title.length < 15 ? <h6 className="list-item col-md-4">{item.Title}</h6> : 
 											<h6 className="movieTitle">{item.Title.substring(0, 15) + '...'}</h6>
@@ -23,8 +23,8 @@ const Movie = (props) => {
 											item.Poster === "N/A" ? <img src="https://dummyimage.com/200x350&text=Picture+Not+Available" alt="not Available"/> :	
 											<img src={item.Poster} alt={item.Title}/>
 										}
-									</div>
-								</Col>
+									</Col>
+								</Row>
 							)
 					})
 				}
